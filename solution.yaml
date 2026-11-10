@@ -1,0 +1,13 @@
+apiVersion: solution.sap/v1
+kind: Solution
+
+metadata:
+  name: leave-balance-d4f5b
+  version: "1.0.0"
+  description: Conversational AI agent that allows employees to check their remaining vacation and leave balances from SAP SuccessFactors via natural language queries
+
+assets:
+  - ref: ./assets/leave-balance-agent/asset.yaml
+  - ref: ./assets/sap-sf-ectimeoff-mcp-server/asset.yaml
+  - ref: ./assets/sap-sf-balances-mcp-server/asset.yaml
+  - ref: ./assets/sap-sf-availabletimetypes-mcp-server/asset.yaml

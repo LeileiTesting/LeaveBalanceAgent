@@ -1,0 +1,21 @@
+apiVersion: asset.sap/v1
+kind: Asset
+type: mcp-server
+
+metadata:
+  name: sap-sf-availabletimetypes-mcp-server
+  description: Exposes SAP SuccessFactors Available Time Types REST API as MCP tools to retrieve leave types available to an employee
+  version: "1.0.0"
+  translation: mcp-translation/translation.json
+  apiSpec: mcp-translation/api-spec.json
+
+provides:
+  apis:
+    - name: sap-sf-availabletimetypes-mcp-server
+      kind: mcp-server
+      ordId: customer.build:apiResource:leave-balance-d4f5b.sap-sf-availabletimetypes-mcp-server:v1
+
+requires:
+  - name: AvailableTimeTypes
+    kind: api
+    ordId: sap.sf:apiResource:AvailableTimeTypes:v1
